@@ -1,7 +1,9 @@
 pipeline:
   agent:
     any:
+  environment:
+    SECRETTEST: "hola.txt"
   stages:
     - stage: "cat hello world"
       steps:
-        - cat secrets.SECRETTEST 
+        - cat env.SECRETTEST 

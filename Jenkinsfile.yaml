@@ -13,10 +13,9 @@ pipeline:
         steps:
          - sh """
               echo hola >> hola.txt
-              yourfilenames=`ls ./*`
-              for eachfile in $yourfilenames
+              for entry in "."/*
               do
-                 echo $eachfile
+                echo "$entry"
               done
               """
 

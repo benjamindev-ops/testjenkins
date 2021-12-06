@@ -10,7 +10,8 @@ pipeline:
     - stage: "view directory"
       steps:
        - sh """
-              ls 
+            echo hola >> hola.txt
+            ls 
             """
        
 

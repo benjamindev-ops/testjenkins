@@ -5,4 +5,4 @@ pipeline:
   - stage: "Hello World"
     steps: sh "echo 'Hola Mundo!'"
   - stage: "Hello World with env"
-    steps: sh "cat  ${{ secrets.SECRETTEST}}"
+    steps: sh "cat  '${{ secrets.SECRETTEST}}'"

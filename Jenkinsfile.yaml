@@ -9,4 +9,4 @@ pipeline:
        - echo "env is ${SECRETTEST}"
     - stage: "cat hello world env"
       steps:
-       - ls
+       - dir

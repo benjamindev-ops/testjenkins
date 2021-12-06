@@ -7,6 +7,4 @@ pipeline:
     - stage: "cat hello world env"
       steps:
        - echo "env is ${SECRETTEST}"
-    - stage: "cat hello world file"
-      steps:
-       - Get-Content '${SECRETTEST}'
+

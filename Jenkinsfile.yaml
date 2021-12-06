@@ -3,15 +3,21 @@ pipeline:
     any:
   environment:
     SECRETTEST: hola.txt
-  stages:
+ 
+ stages:
     - stage: "cat hello world env"
       steps:
        - echo "env is ${SECRETTEST}"
+ 
     - stage: "view directory"
       steps:
        - sh """
             echo hola >> hola.txt
-            ls 
+            yourfilenames=`ls ./*`
+            for eachfile in $yourfilenames
+            do
+               echo $eachfile
+            done
             """
        
 

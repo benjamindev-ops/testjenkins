@@ -9,13 +9,5 @@ pipeline:
         steps:
          - echo "env is ${SECRETTEST}"
 
-      - stage: "view directory"
-        steps:
-         - python """
-              echo hola >> hola.txt
-              import os
-              hola_raw = os.popen("cat hola.txt").read()
-              print(hola_raw)
-              """
 
 

@@ -4,7 +4,7 @@ pipeline:
   environment:
     SECRETTEST: hola.txt
  
-   stages:
+  stages:
       - stage: "cat hello world env"
         steps:
          - echo "env is ${SECRETTEST}"

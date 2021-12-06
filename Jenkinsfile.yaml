@@ -4,5 +4,5 @@ pipeline:
   stages:
   - stage:"Hello World"
     steps:
-    - sh "echo 'Hola Mundo!'"
+      - sh "echo 'Hola Mundo!'"
     

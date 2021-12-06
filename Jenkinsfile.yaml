@@ -6,4 +6,4 @@ pipeline:
   stages:
     - stage: "cat hello world"
       steps:
-        - cat env.SECRETTEST 
+        - Get-Content env.SECRETTEST 

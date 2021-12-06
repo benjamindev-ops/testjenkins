@@ -1,8 +1,8 @@
 pipeline:
-  agent:
-    any:
+  environment:
+    KEY1: ${{ secrets.SECRETTEST}}
   stages:
   - stage: "Hello World"
     steps: sh "echo 'Hola Mundo!'"
   - stage: "Hello World with env"
-    steps: sh "cat  '${{ secrets.SECRETTEST}}'"
+    steps: sh "cat  '$KEY1'"

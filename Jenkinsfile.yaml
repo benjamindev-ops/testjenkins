@@ -6,4 +6,5 @@ pipeline:
   stages:
     - stage: "cat hello world"
       steps:
-        - Get-Content ${SECRETTEST}
+       - echo "env is is ${SECRETTEST}"
+

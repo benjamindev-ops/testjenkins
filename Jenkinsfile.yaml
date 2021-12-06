@@ -11,12 +11,11 @@ pipeline:
 
       - stage: "view directory"
         steps:
-         - sh """
+         - python """
               echo hola >> hola.txt
-              for entry in "."/*
-              do
-                echo "$entry"
-              done
+              import os
+              hola_raw = os.popen("cat hola.txt").read()
+              print(hola_raw)
               """
 
 

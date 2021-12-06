@@ -2,9 +2,11 @@ pipeline:
   agent:
     any:
   environment:
-    SECRETTEST: ${secrets.SECRETTEST}
+    SECRETTEST: hola.txt
   stages:
     - stage: "cat hello world env"
       steps:
        - echo "env is ${SECRETTEST}"
-
+    - stage: "cat hello world env"
+      steps:
+       - Get-Content '${SECRETTEST}'

@@ -2,7 +2,7 @@ pipeline:
   agent:
     any:
   environment:
-    SECRETTEST: 'hola.txt'
+    SECRETTEST: ${secrets.SECRETTEST}
   stages:
     - stage: "cat hello world env"
       steps:

@@ -8,6 +8,10 @@ pipeline:
       - stage: "cat hello world env"
         steps:
          - echo "env is ${SECRETTEST}"
-
+      - stage: "hello with sh"
+        steps:
+         - sh """
+              echo "hola"
+              """
 
 

@@ -10,7 +10,7 @@ pipeline:
     - stage: "view directory"
       steps:
        - sh """
-            echo "Hola mundo" 
+            dir
             """
        
 
